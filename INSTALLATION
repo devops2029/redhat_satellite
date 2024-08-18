@@ -21,6 +21,15 @@ dnf module enable satellite:el8
 dnf update
 
 dnf install satellite
+satellite-maintain packages install sos
 
+
+satellite-installer --scenario satellite \
+--foreman-initial-organization "My_Organization" \
+--foreman-initial-location "My_Location" \
+--foreman-initial-admin-username admin \
+--foreman-initial-admin-password P@ssw0rd
+
+tail -f /var/log/foreman-installer/satellite.log
 
 
