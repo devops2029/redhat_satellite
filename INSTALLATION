@@ -1,4 +1,26 @@
-INSTALLATION
-------------
+Prerequisites
+
+subscription-manager register
+subscription-manager list --all --available --matches 'Red Hat Satellite Infrastructure Subscription'
+subscription-manager attach --pool=pool_id
+Successfully attached a subscription for: Red Hat Satellite Infrastructure Subscription
+subscription-manager list --consumed
+
+subscription-manager repos --disable "*"
+ping -c1 localhost
+ping -c1 `hostname -f` # my_system.domain.com
+hostnamectl set-hostname name
+
+subscription-manager repos --enable=rhel-8-for-x86_64-baseos-rpms \
+--enable=rhel-8-for-x86_64-appstream-rpms \
+--enable=satellite-6.15-for-rhel-8-x86_64-rpms \
+--enable=satellite-maintenance-6.15-for-rhel-8-x86_64-rpms
+
+dnf module enable satellite:el8
+
+dnf update
+
+dnf install satellite
+
 
 
