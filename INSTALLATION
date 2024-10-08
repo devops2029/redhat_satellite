@@ -17,6 +17,12 @@ subscription-manager repos --enable=rhel-8-for-x86_64-baseos-rpms \
 --enable=satellite-maintenance-6.15-for-rhel-8-x86_64-rpms \
 --enable=satellite-capsule-6.15-for-rhel-8-x86_64-rpms
 
+reposync -n -p /localrepo/baseos --download-metadata --repo=rhel-8-for-x86_64-baseos-rpms
+reposync -n -p /localrepo/appstream --download-metadata --repo=rhel-8-for-x86_64-appstream-rpms
+reposync -n -p /localrepo/satellite --download-metadata --repo=satellite-6.15-for-rhel-8-x86_64-rpms
+reposync -n -p /localrepo/satellite-maintenance --download-metadata --repo=satellite-maintenance-6.15-for-rhel-8-x86_64-rpms
+reposync -n -p /localrepo/satellite-capsule --download-metadata --repo=satellite-capsule-6.15-for-rhel-8-x86_64-rpms
+
 dnf module enable satellite:el8
 
 dnf update
