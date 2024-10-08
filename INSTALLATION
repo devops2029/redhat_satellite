@@ -14,7 +14,8 @@ hostnamectl set-hostname name
 subscription-manager repos --enable=rhel-8-for-x86_64-baseos-rpms \
 --enable=rhel-8-for-x86_64-appstream-rpms \
 --enable=satellite-6.15-for-rhel-8-x86_64-rpms \
---enable=satellite-maintenance-6.15-for-rhel-8-x86_64-rpms
+--enable=satellite-maintenance-6.15-for-rhel-8-x86_64-rpms \
+--enable=satellite-capsule-6.15-for-rhel-8-x86_64-rpms
 
 dnf module enable satellite:el8
 
