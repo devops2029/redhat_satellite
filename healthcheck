@@ -13,4 +13,16 @@ bash
 
 These commands will help you perform a comprehensive health check of your Red Hat Satellite environment.
 
-  
+#yum check-update  
+#satellite-maintain service status
+#foreman-maintain service status
+#satellite-maintain service list
+#satellite-maintain service status --only postgresql
+
+#Back up the internal databases
+satellite-maintain backup online --skip-pulp-content --preserve-directory -y /var/migration_backup
+
+#Install the rhel-system-roles package.
+yum install rhel-system-roles
+
+
