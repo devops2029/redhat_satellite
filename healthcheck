@@ -1,0 +1,16 @@
+Scheduling Health Checks
+
+1. Schedule regular health checks using cron:
+
+bash
+sudo crontab -e
+
+Add the following line to run the health check daily:
+
+bash
+0 0 * * * /usr/bin/satellite-healthcheck > /dev/null 2>&1
+
+
+These commands will help you perform a comprehensive health check of your Red Hat Satellite environment.
+
+  
