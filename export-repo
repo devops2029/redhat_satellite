@@ -1,1 +1,8 @@
 
+ hammer content-export complete repository --product="Red Hat Enterprise Linux for x86_64" --name="Red Hat Enterprise Linux 8 for x86_64 - AppStream RPMs 8.10" --organization="My_Organization"
+
+ hammer content-export complete repository --product="Red Hat Enterprise Linux for x86_64" --name="Red Hat Enterprise Linux 8 for x86_64 - BaseOS RPMs 8.10" --organization="My_Organization"
+
+ hammer content-export complete repository --product="Red Hat Enterprise Linux for x86_64" --name="Red Hat Enterprise Linux 8 for x86_64 - AppStream RPMs 8.10" --organization="My_Organization"
+
+ hammer content-export complete repository --product="Red Hat Enterprise Linux for x86_64" --name="Red Hat Enterprise Linux 8 for x86_64 - AppStream RPMs 8.10" --organization="My_Organization"
